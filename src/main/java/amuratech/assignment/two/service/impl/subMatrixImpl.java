@@ -18,7 +18,6 @@ public class subMatrixImpl implements subMatrix {
         int colRet = 0;
         int temp = 0;
         int max_area = 0; // Initialize max area in current
-        // row (or histogram)
 
         int area = 0;
         while (i < C) {
@@ -53,8 +52,6 @@ public class subMatrixImpl implements subMatrix {
         return String.format("%d %d %d", max_area, rowRet, colRet);
     }
 
-    // Returns area of the largest rectangle with all 1s in
-    // A[][]
     static String maxRectangle(int R, int C, int[][] A) {
         // Calculate area for first row and initialize it as
         // result
@@ -63,8 +60,6 @@ public class subMatrixImpl implements subMatrix {
         int row = Integer.parseInt(re[1]);
         int col = Integer.parseInt(re[2]);
 
-        // iterate over row to find maximum rectangular area
-        // considering each row as histogram
         for (int i = 1; i < R; i++) {
 
             for (int j = 0; j < C; j++)
